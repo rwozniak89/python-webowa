@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        function get_data() {
+            $(document).ready(
+                $.get("http://localhost/get_random", function (data) {
+                    $('#napis').text(data)
+                })
+            );
+        }
+        //get_data()
+        setInterval(get_data,1000)
+    </script>
+</head>
+<body>
+<center>
+    <br><br><br><br><br>
+<h1 id="napis">start</h1>
+</center>
+</body>
+</html>
